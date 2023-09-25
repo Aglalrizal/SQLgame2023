@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <link rel="apple-touch-icon" sizes="76x76" href="<?php echo base_url() ?>/assets/img/apple-icon.png">
-  <link rel="icon" type="image/png" href="<?php echo base_url() ?>/assets/img/manpro.ico">
+  <link rel="icon" type="image/png" href="<?php echo base_url() ?>/assets/img/rotasi23.ico">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <title>
     ROTASI 2023 | SQL Game
@@ -19,7 +19,7 @@
   <div class="wrapper">
     <div class="sidebar" data-color="danger" data-background-color="white" data-image="<?php echo base_url() ?>/assets/img/sidebar-1.jpg">
         <div class="logo">
-            <a href="<?php echo base_url() ?>" class="simple-text logo-mini">>_</a>
+            <a href="<?php echo base_url() ?>" class="simple-text logo-mini">⚙</a>
             <a href="<?php echo base_url() ?>" class="simple-text logo-normal">ROTASI 2023</a>
         </div>
       <div class="sidebar-wrapper">

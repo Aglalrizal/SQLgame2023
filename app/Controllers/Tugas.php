@@ -35,6 +35,9 @@ class Tugas extends BaseController {
                         $data['tugas'][$key][0] = $key+1;
                         $data['tugas'][$key][1] = $value['nama_tugas'];
                         $data['tugas'][$key][2] = $value['ketentuan'];
+                        // Aslinya key 1 -> nama_tugas, key 2 -> ketentuan (dari DB SQLnya)
+                        // Dipakai 'tugas' sama 'keterangan' karena tugasnya pakai "AS" di Querynya
+                        // Klo tugas 1 mau jalan, ganti jadi semula
                     }
                     
                     $session->setFlashdata('msg', '<div class="alert alert-success">
@@ -117,7 +120,9 @@ class Tugas extends BaseController {
             'jawaban' => $sql,
             'hasil' => $hasil,
             'status' => $status,
-            'kategori' => 'tugas2',
+            'kategori' => 'tugas1',
+            // kategori diganti sesuai Query (tugas1, tugas2)
+            // tugas1 baru jalan klo di bagian value key diganti.. liat atas
         ];
         
         $model = new JawabanModel();

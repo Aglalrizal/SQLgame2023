@@ -130,6 +130,7 @@ Kolom ketentuan ditampilkan menjadi ket</pre>
                               <table class="table">
                                 <thead>
                                     <tr>
+                                      <!-- Ini Diganti ya, sesuai As yang disuruh -->
                                         <th>Nomor Tugas</th>
                                         <th>Nama Tugas</th>
                                         <th>Keterangan</th>

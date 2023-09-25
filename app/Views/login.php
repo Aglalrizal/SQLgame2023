@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <link rel="apple-touch-icon" sizes="76x76" href="<?php echo base_url() ?>/assets/img/apple-icon.png">
-  <link rel="icon" type="image/png" href="<?php echo base_url() ?>/assets/img/manpro.ico">
+  <link rel="icon" type="image/png" href="<?php echo base_url() ?>/assets/img/rotasi23.ico">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
   <title>
     Masuk ke akun Anda
@@ -16,7 +16,7 @@
   <link href="<?php echo base_url() ?>/assets/css/material-kit.css?v=2.0.7" rel="stylesheet" />
 </head>
 <body class="login-page sidebar-collapse">
-<div class="page-header header-filter" style="background-image: url('<?php echo base_url() ?>/assets/img/bg-manpro.png'); background-repeat: no-repeat; background-size: cover; background-position: center;">
+<div class="page-header header-filter" style="background-image: url('<?php echo base_url() ?>/assets/img/bg-rotasi2023.png'); background-repeat: no-repeat; background-size: cover; background-position: center;">
     <div class="container">
       <div class="row">
         <div class="col-lg-4 col-md-6 ml-auto mr-auto">

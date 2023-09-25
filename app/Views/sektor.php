@@ -81,7 +81,7 @@
                       <form action="sektor" method="post">
                         <div class="form-group label-floating">
                             <label for="sql" class="control-label">Masukkan Query SQL..</label>
-                            <input type="text" id="sql" name="sql" class="form-control" required onpaste="return false;" autocomplete="off">
+                            <input type="text" id="sql" name="sql" class="form-control" required onpaste="return false;" autocomplete="off" >
                         </div>
                         <div class="form-group label-floating">
                             <label for="id_sektor" class="control-label">id = <?= $_SESSION['idSektor']; ?></label>
