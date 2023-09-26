@@ -101,28 +101,34 @@
                                 <tr>
                                     <th>id_sektor</th>
                                     <th>nama_sektor</th>
+                                    <th>link</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
                                     <td>xxxx</td>
                                     <td>ini berisi nama sektor sesuai dengan id_sektor.</td>
+                                    <td>Link ke WA Group Sektor</td>
                                 </tr>
                                 <tr>
                                     <td>xxxx</td>
                                     <td>ini berisi nama sektor sesuai dengan id_sektor.</td>
+                                    <td>Link ke WA Group Sektor</td>
                                 </tr>
                                 <tr>
                                     <td>xxxx</td>
                                     <td>ini berisi nama sektor sesuai dengan id_sektor.</td>
+                                    <td>Link ke WA Group Sektor</td>
                                 </tr>
                                 <tr>
                                     <td>xxxx</td>
                                     <td>ini berisi nama sektor sesuai dengan id_sektor.</td>
+                                    <td>Link ke WA Group Sektor</td>
                                 </tr>
                                 <tr>
                                     <td>xxxx</td>
                                     <td>ini berisi nama sektor sesuai dengan id_sektor.</td>
+                                    <td>Link ke WA Group Sektor</td>
                                 </tr>
                                 <tr>
                                     <td>...</td>
