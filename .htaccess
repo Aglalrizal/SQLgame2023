@@ -1,0 +1,4 @@
+# Redirect to the '2021' folder
+RewriteEngine On
+RewriteRule ^$ /2021/ [L]
+RewriteRule (.*) /2021/$1 [L]
