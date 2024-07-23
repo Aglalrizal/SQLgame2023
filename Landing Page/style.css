@@ -565,6 +565,10 @@ section.start-animation .column h2 {
     height: 62vh;
 }
 
+.filosofi-content img {
+    height: fit-content;
+}
+
 .content h3 {
     font-size: 1.7rem;
     letter-spacing: .05rem;
@@ -765,12 +769,17 @@ footer i {
     }
 
     .filosofi-content p {
-        font-size: 2rem;
+        font-size: 1.8rem;
+    }
+
+    .filosofi-content img {
+        height: 30%;
     }
 
     .struktural-content img {
         width: 90px;
     }
+
     .wrapper {
         justify-content: center;
         align-items: center;
