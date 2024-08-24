@@ -61,7 +61,7 @@ class Account extends BaseController {
             $data = ['username', 'loggedIn'];
             $session->remove($data);
         }
-        return redirect()->to(base_url('account/login'));
+        return redirect()->to(base_url('/'));
 	}
     
 }

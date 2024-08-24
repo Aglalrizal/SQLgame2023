@@ -1,0 +1,777 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;1,500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Cinzel%20Decorative&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    scrollbar-width: none;
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+    font-family: "poppins";
+    outline: none;
+    border: none;
+    color: #fff;
+    max-width: 100%;
+}
+
+body {
+    background: #000;
+    height: 100vh;
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+.header {
+    position: fixed;
+    background: linear-gradient(#900000, #470000);
+    left: 0;
+    top: 0;
+    padding: 1rem 10%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 100;
+}
+
+
+.logo {
+    font-family: "Cinzel Decorative";
+    font-size: 3.8rem;
+    font-weight: 800;
+    text-decoration: none;
+    color: #fff;
+    transform: translateX(-100%);
+    opacity: 0;
+    animation: RightSlide 1s ease forwards;
+    text-shadow: 3px 3px 5px #000;
+}
+
+@keyframes RightSlide {
+    0% {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0%);
+        opacity: 1;
+    }
+}
+
+#menu {
+    color: #fff;
+    font-size: 2.5rem;
+    display: none;
+}
+
+.navbar a {
+    display: inline-block;
+    font-size: 1.7rem;
+    text-decoration: none;
+    margin: 0 2.5rem;
+    font-weight: 500;
+    letter-spacing: .02;
+    transition: .5s ease;
+    transform: translateY(-100px);
+    opacity: 0;
+    animation: TopSlide 1s ease forwards;
+    animation-delay: calc(.2s * var(--vlr));
+}
+
+
+@keyframes TopSlide {
+    0% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+.navbar a:hover,
+.navbar a.active {
+    text-shadow: 8px 8px 8px #000;
+}
+
+section {
+    padding: 10rem 9% 2rem;
+    height: auto;
+}
+
+section.beranda {
+    background-image: url(../img/landing/bg.png) !important;
+    /* 2021\assets\img\landing\bg.png */
+}
+
+.box {
+    width: 100%;
+    height: 35vh;
+    background: linear-gradient(to top, rgba(0,0,0,1), rgba(0,0,0,0));
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.tujuan,
+.filosofi,
+.struktural {
+    overflow: hidden;
+}
+
+.beranda {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 1) 100%), url('./assets/bg.png');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    opacity: 0;
+    transition: opacity 1s ease-in;
+}
+
+.fade-in {
+    opacity: 1;
+}
+
+.text-content {
+    max-width: 70rem;
+}
+
+.text-content h1 {
+    font-size: 6rem;
+    color: #fff;
+    text-shadow: 5px 5px 5px #000;
+    text-transform: capitalize;
+    letter-spacing: .05rem;
+    font-weight: 600;
+    transform: translateY(-100px);
+    opacity: 0;
+    animation: RightSlide 1s ease forwards;
+    animation-delay: 1s;
+}
+
+.text-animation {
+    position: relative;
+    width: 44rem;
+}
+
+.text-animation h3 {
+    font-size: 1.8rem;
+    font-weight: 900;
+    color: transparent;
+    -webkit-text-stroke: .5px #900000;
+    background: linear-gradient(#900000, #900000);
+    background-repeat: no-repeat;
+    -webkit-background-clip: text;
+    background-position: -44rem 0;
+    transform: translateY(-100px);
+    opacity: 0;
+    animation: textSlide 6s linear infinite,
+        TopSlide 1s ease forwards;
+    animation-delay: 2s, 1.2s;
+}
+
+@keyframes textSlide {
+
+    0%,
+    10%,
+    100% {
+        background-position: -44rem 0;
+    }
+
+    65%,
+    85% {
+        background-position: 0 0;
+    }
+}
+
+.text-animation::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 0;
+    border-right: 2px solid #900000;
+    transform: translateY(-100px);
+    opacity: 0;
+    animation: CursorSlide 6s linear infinite,
+        TopSlide 1s ease forwards;
+    animation-delay: 2s, 1.2s;
+}
+
+@keyframes CursorSlide {
+
+    0%,
+    10%,
+    100% {
+        width: 0;
+    }
+
+    65%,
+    78%,
+    85% {
+        opacity: 1;
+        width: 100%;
+    }
+
+    75%,
+    81% {
+        opacity: 0;
+    }
+
+}
+
+.text-content p {
+    font-size: 1.4rem;
+    margin: 1rem 0;
+    transform: translateX(100px);
+    opacity: 0;
+    animation: leftSlide 1s ease forwards;
+    animation-delay: 1.4s;
+    text-align: justify;
+}
+
+@keyframes leftSlide {
+    0% {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
+
+@keyframes Slide {
+    0% {
+        width: 100%;
+    }
+
+    100% {
+        width: 0;
+    }
+}
+
+.btn {
+    height: 100%;
+    min-width: 25rem;
+    color: #fff;
+    background: rgba(255, 255, 255, .1);
+    border: .2rem solid rgba(255, 255, 255, .3);
+    backdrop-filter: blur(5rem);
+    border-radius: .8rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: -100%;
+    height: 300%;
+    width: 100%;
+    background: linear-gradient(#0f0a0a, #900000, #0f0a0a, #900000);
+    z-index: -1;
+    transition: .5s ease;
+}
+
+.btn:hover::before {
+    top: 0;
+}
+
+.social-media {
+    margin: 2rem 0;
+}
+
+.social-media i {
+    display: inline-block;
+    font-size: 2.5rem;
+    background: rgba(255, 255, 255, .1);
+    border: .2rem solid rgba(255, 255, 255, .3);
+    padding: .8rem;
+    margin: 0 .5rem;
+    border-radius: 50%;
+    color: #fff;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    animation: Bottom 1s ease forwards;
+    animation-delay: calc(.2s * var(--vlr));
+    transform: translateY(100px);
+    opacity: 0;
+
+}
+
+@keyframes Bottom {
+    0% {
+        transform: translateY(100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+.social-media i::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: -100%;
+    height: 300%;
+    width: 100%;
+    background: linear-gradient(#0f0a0a, #900000, #0f0a0a, #900000);
+    z-index: -1;
+    transition: .5s ease;
+}
+
+i:hover::after {
+    top: 0;
+}
+
+.beranda img {
+    width: 30vw;
+    border-radius: 50%;
+    filter: drop-shadow(0 0 8rem #c0c0c0);
+    animation: Scale 1s ease forwards;
+    scale: 0;
+    animation-delay: 2s;
+}
+
+@keyframes Scale {
+    0% {
+        scale: 0;
+    }
+
+    100% {
+        scale: 1;
+    }
+}
+
+/* Tujuan section */
+.tujuan {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding-bottom: 6rem;
+    gap: 2rem;
+}
+
+.title {
+    font-size: 3.5rem;
+    margin-bottom: 3rem;
+    font-weight: 600;
+    text-align: center;
+    transform: translateY(-100px);
+    opacity: 0;
+}
+
+section.start-animation .title {
+    animation: top 0.8s ease forwards;
+}
+
+@keyframes top {
+    0% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateY(0px);
+        opacity: 1;
+    }
+}
+
+.title span {
+    background-color: #900000;
+}
+
+section.start-animation .aboutImg {
+    animation: scaleout 1s ease forwards;
+}
+
+@keyframes scaleout {
+    0% {
+        scale: 0;
+    }
+
+    100% {
+        scale: 1;
+    }
+}
+
+.text-content2 {
+    text-align: justify;
+}
+
+.text-content2 h2 {
+    font-size: 2.6rem;
+    transform: translatex(-100px);
+    opacity: 0;
+}
+
+section.start-animation .text-content2 h2 {
+    animation: Right 1s ease forwards;
+}
+
+@keyframes Right {
+    0% {
+        transform: translatex(-100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translatex(0px);
+        opacity: 1;
+    }
+}
+
+.text-content2 p {
+    font-size: 1.5rem;
+    margin: 2rem 0 3rem;
+    transform: translatex(100px);
+    opacity: 0;
+}
+
+.text-content2 ul {
+    font-size: 1.5rem;
+    margin-left: 2rem;
+    transform: translatex(100px);
+    opacity: 0;
+}
+
+section.start-animation .text-content2 p, section.start-animation .text-content2 ul {
+    animation: Left 1s ease forwards;
+}
+
+@keyframes Left {
+    0% {
+        transform: translatex(100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translatex(0px);
+        opacity: 1;
+    }
+}
+
+/* filosofi section */
+.row {
+    display: flex;
+    column-gap: 4rem;
+    flex-wrap: wrap;
+}
+
+.column {
+    flex: 1 1 30rem;
+}
+
+.column:nth-child(1) {
+    opacity: 0;
+    transform: translateX(-100px);
+}
+
+section.start-animation .column:nth-child(1) {
+    animation: Right 1s ease forwards;
+    animation-delay: 0.8s;
+}
+
+.column:nth-child(2) {
+    opacity: 0;
+    transform: translateX(100px);
+}
+
+section.start-animation .column:nth-child(2) {
+    animation: TopSlide 1s ease forwards;
+    animation-delay: 0.8s;
+}
+
+.column:nth-child(3) {
+    opacity: 0;
+    transform: translateX(100px);
+}
+
+section.start-animation .column:nth-child(3) {
+    animation: Left 1s ease forwards;
+    animation-delay: 0.8s;
+}
+
+.column h2 {
+    font-size: 2.5rem;
+    margin: 2rem 0 1rem 1.96rem;
+    transform: translateY(-100px);
+    opacity: 0;
+}
+
+section.start-animation .column h2 {
+    animation: top 1s ease forwards;
+    animation-delay: 0.8s;
+}
+
+.filosofi-content {
+    padding: 0.5rem;
+}
+
+.filosofi-content .content {
+    padding: 2rem;
+    border: .2rem solid #900000;
+    background: rgba(255, 255, 255, .1);
+    border-radius: .5rem;
+    margin-bottom: 2rem;
+    position: relative;
+    text-align: center;
+    height: 70vh;
+}
+
+.filosofi-content img {
+    margin-top: 1rem;
+    height: 100px;
+}
+
+.content h3 {
+    font-size: 1.7rem;
+    letter-spacing: .05rem;
+    margin: .5rem 0;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: #900000;
+}
+
+.content p {
+    font-size: 1.5rem;
+    text-align: justify;
+}
+
+/* struktural-content */
+.wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5rem;
+    flex-wrap: wrap;
+    padding-bottom: 30px;
+}
+
+.struktural-title {
+    font-size: 2.4rem;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+    opacity: 0;
+    transform: translateY(-100px);
+}
+
+section.start-animation .struktural-title {
+    animation: top 1s ease forwards;
+    animation-delay: 0.8s;
+}
+
+.struktural-content {
+    width: 100%;
+    flex: 1 1 40rem;
+    text-align: center;
+}
+
+.struktural-content p {
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.struktural-content b {
+    padding-left: 5px;
+    padding-right: 5px;
+    background-color: #900000;
+}
+
+.struktural-content img {
+    width: 120px;
+    padding-top: 10%;
+}
+
+.struktural-box1 {
+    opacity: 0;
+    transform: translateX(-100px);
+}
+
+section.start-animation .struktural-box1 {
+    animation: Right 1s ease forwards;
+    animation-delay: 0.8s;
+}
+
+.struktural-box2 {
+    opacity: 0;
+    transform: translateX(100px);
+}
+
+section.start-animation .struktural-box2 {
+    animation: Left 1s ease forwards;
+    animation-delay: 0.8s;
+}
+
+/* footer */
+
+footer {
+    background: linear-gradient(#900000, #470000);
+    padding: 2rem 9%;
+    margin-top: 3rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+footer p {
+    font-size: 1.6rem;
+}
+
+footer img {
+    height: 50px;
+    margin-bottom: -18px;
+}
+
+/* RESPONSIVE */
+@media(max-width:1200px) {
+    html {
+        font-size: 55;
+    }
+    .filosofi-content .content{
+        height: 76vh;
+    }
+}
+
+@media(max-width:1193px) {
+    .filosofi-content .content{
+        height: auto;
+    }
+}
+
+@media(max-width:991px) {
+    .header {
+        padding: 2rem 9%;
+    }
+
+    section {
+        padding: 10rem 3% 2rem;
+    }
+
+    footer {
+        padding: 2rem 3%;
+    }
+}
+
+@media(max-width:768px) {
+    #menu {
+        display: block;
+    }
+
+    .navbar {
+        position: absolute;
+        left: 0;
+        top: 100%;
+        width: 100%;
+        padding: 1rem 3%;
+        background: #0f0a0a;
+        border-top: 1px solid rgba(255, 255, 255, .1);
+        border-bottom: .2rem solid rgba(255, 255, 255, .1);
+        display: none;
+    }
+
+    .navbar.active {
+        display: block;
+    }
+
+    .navbar a {
+        display: block;
+        margin: 3rem 0;
+        font-size: 2rem;
+    }
+
+    .beranda {
+        flex-direction: column-reverse;
+    }
+
+    .beranda .text-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .beranda .text-content h1 {
+        font-size: 4rem;
+    }
+
+    .beranda img {
+        width: 70vw;
+        margin-top: 40%;
+    }
+}
+
+@media(max-width:450px) {
+    html {
+        font-size: 50%;
+    }
+
+    .text-animation {
+        text-align: center;
+    }
+
+    .column,
+    .text-content {
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+
+    .filosofi-content .content {
+        height: auto;
+    }
+
+    .filosofi-content h3 {
+        font-size: 3rem;
+    }
+
+    .filosofi-content p {
+        font-size: 1.3rem;
+    }
+
+    .filosofi-content img {
+        height: 80px;
+    }
+
+    .struktural-content img {
+        width: 90px;
+    }
+
+    .wrapper {
+        justify-content: center;
+        align-items: center;
+    }
+
+    footer p {
+        font-size: 8px;
+    }
+
+    footer img {
+        height: 34px;
+        margin-bottom: -10px;
+    }
+}

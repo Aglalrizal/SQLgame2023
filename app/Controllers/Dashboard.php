@@ -8,7 +8,7 @@ class Dashboard extends BaseController {
     public function index() {
         $this->session = Services::session();
         if (!$this->session->has('loggedIn')) {
-            return redirect()->to(base_url('account/login'));
+            return redirect()->to(base_url('login'));
         }
 
         $mData['menu'] = "Dashboard";
